@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov 25 08:43:06 2024
+Created on Mon Nov 25 09:03:02 2024
 Objective:
-    - Train VGG-19 to differentiate MRI with tumor with that of no-tumor
+    - Train DenseNet-169 to differentiate MRI with tumor with that of no-tumor
 @author: dagi
 """
 import os 
@@ -88,8 +88,8 @@ val_dataloader = DataLoader(
                         pin_memory = True)
 
 # In[] Step 5: import and instantiate ResNet50
-weights = models.VGG19_Weights.DEFAULT 
-model = models.vgg19(weights = weights) 
+weights = models.DenseNet121_Weights.DEFAULT 
+model = models.densenet121(weights = weights) 
 
 # In[] Modify the first layer to receive grayscale images
 # Get the pretrained model's first layer
