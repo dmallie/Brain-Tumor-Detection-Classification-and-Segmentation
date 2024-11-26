@@ -93,17 +93,17 @@ model = models.vgg19(weights = weights)
 
 # In[] Modify the first layer to receive grayscale images
 # Get the pretrained model's first layer
-original_conv1 = model.conv1
+input_layer = model.features[0]
 
 # Create a new Conv2d layer with 1 input channel instead of 3
-model.conv1 = nn.Conv2d(
-    in_channels=1,               # Set to 1 for grayscale images
-    out_channels=original_conv1.out_channels,
-    kernel_size=original_conv1.kernel_size,
-    stride=original_conv1.stride,
-    padding=original_conv1.padding,
-    bias=original_conv1.bias
-)
+model.features[0] = nn.Conv2d(
+                        in_channels=1,               # Set to 1 for grayscale images
+                        out_channels=input_layer.out_channels,
+                        kernel_size=input_layer.kernel_size,
+                        stride=input_layer.stride,
+                        padding=input_layer.padding,
+
+                    )
 
 # In[] To inspect Model Info
 summary(model = model,
@@ -116,21 +116,28 @@ summary(model = model,
 # 1. Freezing the trainablility of base model
 for params in model.parameters():
     params.requires_grad = False
-    
-# In layer4 Bottleneck[2] set the parameter to True
-for params in model.layer4.parameters():
+
+# Set the trainablility of denseblock4 True 
+# Unfreeze layers starting from denselayer8
+unfreeze = False
+for name, layer in model.features.named_children():
+    if name == "30":
+        unfreeze = True  # Start unfreezing from here
+
+    if unfreeze:
+        for params in layer.parameters():
+            params.requires_grad = True
+# unfreeze all classifier parameters
+for params in model.classifier.parameters():
     params.requires_grad = True 
 
 # modify the output shape and connection layer of the model
-model.fc = nn.Sequential(
-    nn.Dropout(p = 0.2, inplace = True),
-    nn.Linear(in_features = 2048,
-              out_features = 512,              
-              bias = True),
-    nn.ReLU(),
-    nn.Linear(in_features=512,
-              out_features=OUTPUT_SHAPE)
-    )
+model.classifier[6] = nn.Linear( 
+                        in_features = 4096,
+                        out_features = OUTPUT_SHAPE,
+                        bias = True)
+
+    
 # In[9] Model Info after configuration
 summary(model = model,
         input_size = (BATCH, 1, HEIGHT, WIDTH),
@@ -157,7 +164,8 @@ train_accuracy, val_accuracy = main_loop( model,
                                          optimizer,
                                          criterion = loss_fn,
                                          epochs = EPOCH,
-                                         scheduler = scheduler)
+                                         scheduler = scheduler,
+                                         save_path = "vgg_19.pth")
 
 # End the timer and print out how long it took
 end_time = timer()

@@ -1,0 +1,5 @@
+System's Performance
+	- Ensemble model accuracy: 98.31%
+	- Resnet model accuracy: 98.13%
+	- Densenet model accuracy: 97.96%
+	- VGG model accuracy: 96.83%
