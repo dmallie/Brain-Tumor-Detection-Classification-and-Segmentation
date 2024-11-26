@@ -107,7 +107,7 @@ model.conv1 = nn.Conv2d(
 
 # In[] To inspect Model Info
 summary(model = model,
-        input_size = (BATCH, 1, HEIGHT, WIDTH),
+        input_size = (BATCH, 3, HEIGHT, WIDTH),
         col_names = ["input_size", "output_size", "trainable"],
         col_width = 20,
         row_settings = ["var_names"])

@@ -97,7 +97,7 @@ def validation_loop(model, dataloader, criterion):
     
 # In[] Main loop
 def main_loop(model, train_dataloader, val_dataloader,
-              optimizer, criterion, epochs, scheduler,save_path="best_model.pth"):
+              optimizer, criterion, epochs, scheduler,save_path):
     best_val_loss = float("inf")
 
     for epoch in range(epochs):

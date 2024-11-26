@@ -93,16 +93,16 @@ model = models.densenet121(weights = weights)
 
 # In[] Modify the first layer to receive grayscale images
 # Get the pretrained model's first layer
-original_conv1 = model.conv1
+input_layer = model.features[0] # first convolutional layer
 
 # Create a new Conv2d layer with 1 input channel instead of 3
-model.conv1 = nn.Conv2d(
-    in_channels=1,               # Set to 1 for grayscale images
-    out_channels=original_conv1.out_channels,
-    kernel_size=original_conv1.kernel_size,
-    stride=original_conv1.stride,
-    padding=original_conv1.padding,
-    bias=original_conv1.bias
+model.features[0] = nn.Conv2d(
+                        in_channels=1,   # Set to 1 for grayscale images
+                        out_channels=input_layer.out_channels,
+                        kernel_size=input_layer.kernel_size,
+                        stride=input_layer.stride,
+                        padding=input_layer.padding,
+                        bias=input_layer.bias
 )
 
 # In[] To inspect Model Info
@@ -117,14 +117,20 @@ summary(model = model,
 for params in model.parameters():
     params.requires_grad = False
     
-# In layer4 Bottleneck[2] set the parameter to True
-for params in model.layer4.parameters():
-    params.requires_grad = True 
+# Set the trainablility of denseblock4 True 
+# Unfreeze layers starting from denselayer8
+unfreeze = False
+for name, layer in model.features.denseblock4.named_children():
+    if name == "denselayer11":
+        unfreeze = True  # Start unfreezing from here
 
+    if unfreeze:
+        for params in layer.parameters():
+            params.requires_grad = True
 # modify the output shape and connection layer of the model
-model.fc = nn.Sequential(
+model.classifier = nn.Sequential(
     nn.Dropout(p = 0.2, inplace = True),
-    nn.Linear(in_features = 2048,
+    nn.Linear(in_features = 1024,
               out_features = 512,              
               bias = True),
     nn.ReLU(),
@@ -157,7 +163,8 @@ train_accuracy, val_accuracy = main_loop( model,
                                          optimizer,
                                          criterion = loss_fn,
                                          epochs = EPOCH,
-                                         scheduler = scheduler)
+                                         scheduler = scheduler,
+                                         save_path = "densenet.pth")
 
 # End the timer and print out how long it took
 end_time = timer()
