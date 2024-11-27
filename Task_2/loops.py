@@ -99,18 +99,24 @@ def validation_loop(model, dataloader, criterion):
 def main_loop(model, train_dataloader, val_dataloader,
               optimizer, criterion, epochs, scheduler,save_path):
     best_val_loss = float("inf")
-
+    accuracy_list_training  = []
+    accuracy_list_val = []
+    loss_list_training = []
+    loss_list_val = []
+    
     for epoch in range(epochs):
         print(f"Epoch [{epoch+1}/{epochs}]")
         
         # Training
         train_loss, train_accuracy = training_loop(model, train_dataloader, optimizer, criterion)
         print(f"Training Loss: {train_loss:.4f}\t Training Accuracy: {train_accuracy:.2f}")
-        
+        accuracy_list_training.append(train_accuracy)
+        loss_list_training.append(train_loss)
         # Validation
         val_loss, val_accuracy = validation_loop(model, val_dataloader, criterion)
         print(f"Validation Loss: {val_loss:.4f}\t Validation Accuracy: {val_accuracy:.2f}")
-        
+        accuracy_list_val.append(val_accuracy)
+        loss_list_val.append(val_loss)
             
         # Step the scheduler if validation loss improves
         scheduler.step(val_loss)
@@ -128,4 +134,4 @@ def main_loop(model, train_dataloader, val_dataloader,
             print("Model saved!")
         
         print("-" * 30)
-    return train_accuracy, val_accuracy
+    return accuracy_list_training, accuracy_list_val, loss_list_training, loss_list_val

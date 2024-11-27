@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Nov 26 10:46:30 2024
+Created on Tue Nov 26 13:34:50 2024
 Objective:
-    - Train VGG-19 to differentiate MRI with tumor with that of no-tumor
+    - Train EfficientNet-V2-S which is significantly more efficient in terms of both computation 
+    (FLOPs) and memory, making it better for real-time applications or deployment on resource-constrained 
+    hardware.
 @author: dagi
 """
 import os 
@@ -62,7 +64,7 @@ transform_train = transforms.Compose([
 transform_val = transforms.Compose([
                         # Resize the image to fit the model
                         transforms.Resize(size=(HEIGHT, WIDTH)),
-                        # Convert image to grayscale 
+                        # Convert image to GrayScale 
                         transforms.Grayscale(num_output_channels=1),
                         # Convert image to tensor object
                         transforms.ToTensor(),
@@ -93,21 +95,21 @@ val_dataloader = DataLoader(
                         pin_memory = True)
 
 # In[] Step 5: import and instantiate ResNet50
-weights = models.VGG19_Weights.DEFAULT 
-model = models.vgg19(weights = weights) 
+weights = models.EfficientNet_V2_S_Weights.DEFAULT
+model = models.efficientnet_v2_s(weights = weights)
 
 # In[] Modify the first layer to receive grayscale images
 # Get the pretrained model's first layer
-input_layer = model.features[0]
+input_layer = model.features[0][0]
 
-# Create a new Conv2d layer with 1 input channel instead of 3
-model.features[0] = nn.Conv2d(
-                        in_channels=1,               # Set to 1 for grayscale images
+# # Create a new Conv2d layer with 1 input channel instead of 3
+model.features[0][0] = nn.Conv2d(
+                        in_channels=1,  # Set to 1 for grayscale images
                         out_channels=input_layer.out_channels,
                         kernel_size=input_layer.kernel_size,
                         stride=input_layer.stride,
                         padding=input_layer.padding,
-
+                        bias=(input_layer.bias is not None),
                     )
 
 # In[] To inspect Model Info
@@ -122,27 +124,34 @@ summary(model = model,
 for params in model.parameters():
     params.requires_grad = False
 
-# Set the trainablility of denseblock4 True 
-# Unfreeze layers starting from denselayer8
+# Set the trainablility of block Sequential 6 to True 
 unfreeze = False
-for name, layer in model.features.named_children():
-    if name == "18":
+for name, layer in model.features[6].named_children():
+    if name == "0":
         unfreeze = True  # Start unfreezing from here
 
     if unfreeze:
         for params in layer.parameters():
             params.requires_grad = True
-# unfreeze all classifier parameters
-for params in model.classifier.parameters():
-    params.requires_grad = True 
+
+# Set the trainability of Conv2dNormActivation block to True
+unfreeze = False
+for name, layer in model.features[7].named_children():
+    if name == "0":
+        unfreeze = True  # Start unfreezing from here
+
+    if unfreeze:
+        for params in layer.parameters():
+            params.requires_grad = True
+
 
 # modify the output shape and connection layer of the model
-model.classifier[6] = nn.Linear( 
-                        in_features = 4096,
+model.classifier[1] = nn.Linear( 
+                        in_features = 1280,
                         out_features = OUTPUT_SHAPE,
                         bias = True)
 
-    
+   
 # In[9] Model Info after configuration
 summary(model = model,
         input_size = (BATCH, 1, HEIGHT, WIDTH),
@@ -170,7 +179,7 @@ accuracy_list_training, accuracy_list_val, loss_list_training, loss_list_val = m
                                                                                      criterion = loss_fn,
                                                                                      epochs = EPOCH,
                                                                                      scheduler = scheduler,
-                                                                                     save_path = "vgg_19.pth")
+                                                                                     save_path = "efficient_net.pth")
 
 # End the timer and print out how long it took
 end_time = timer()
