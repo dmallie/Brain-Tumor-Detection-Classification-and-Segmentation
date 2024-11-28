@@ -1,0 +1,307 @@
+densenet_121.py
+Epoch [1/100]
+correct_predictions: 12224                                 
+ len(actual_labels): 14961
+Training Loss: 0.4431	 Training Accuracy: 0.82
+Validation Loss: 0.2783	 Validation Accuracy: 0.89         
+Model saved!
+------------------------------
+Epoch [2/100]
+correct_predictions: 13268                                 
+ len(actual_labels): 14961
+Training Loss: 0.2900	 Training Accuracy: 0.89
+Validation Loss: 0.2112	 Validation Accuracy: 0.92         
+Model saved!
+------------------------------
+Epoch [3/100]
+correct_predictions: 13617                                 
+ len(actual_labels): 14961
+Training Loss: 0.2268	 Training Accuracy: 0.91
+Validation Loss: 0.2302	 Validation Accuracy: 0.91         
+------------------------------
+Epoch [4/100]
+correct_predictions: 13860                                 
+ len(actual_labels): 14961
+Training Loss: 0.1982	 Training Accuracy: 0.93
+Validation Loss: 0.1617	 Validation Accuracy: 0.94         
+Model saved!
+------------------------------
+Epoch [5/100]
+correct_predictions: 14044                                 
+ len(actual_labels): 14961
+Training Loss: 0.1621	 Training Accuracy: 0.94
+Validation Loss: 0.1392	 Validation Accuracy: 0.95         
+Model saved!
+------------------------------
+Epoch [6/100]
+correct_predictions: 14147                                 
+ len(actual_labels): 14961
+Training Loss: 0.1451	 Training Accuracy: 0.95
+Validation Loss: 0.1263	 Validation Accuracy: 0.95         
+Model saved!
+------------------------------
+Epoch [7/100]
+correct_predictions: 14226                                 
+ len(actual_labels): 14961
+Training Loss: 0.1337	 Training Accuracy: 0.95
+Validation Loss: 0.1107	 Validation Accuracy: 0.96         
+Model saved!
+------------------------------
+Epoch [8/100]
+correct_predictions: 14288                                 
+ len(actual_labels): 14961
+Training Loss: 0.1224	 Training Accuracy: 0.96
+Validation Loss: 0.1037	 Validation Accuracy: 0.96         
+Model saved!
+------------------------------
+Epoch [9/100]
+correct_predictions: 14367                                 
+ len(actual_labels): 14961
+Training Loss: 0.1065	 Training Accuracy: 0.96
+Validation Loss: 0.0945	 Validation Accuracy: 0.97         
+Model saved!
+------------------------------
+Epoch [10/100]
+correct_predictions: 14423                                 
+ len(actual_labels): 14961
+Training Loss: 0.1002	 Training Accuracy: 0.96
+Validation Loss: 0.1174	 Validation Accuracy: 0.96         
+------------------------------
+Epoch [11/100]
+correct_predictions: 14448                                 
+ len(actual_labels): 14961
+Training Loss: 0.0951	 Training Accuracy: 0.97
+Validation Loss: 0.1080	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [12/100]
+correct_predictions: 14445                                 
+ len(actual_labels): 14961
+Training Loss: 0.0950	 Training Accuracy: 0.97
+Validation Loss: 0.0929	 Validation Accuracy: 0.97         
+Model saved!
+------------------------------
+Epoch [13/100]
+correct_predictions: 14500                                 
+ len(actual_labels): 14961
+Training Loss: 0.0829	 Training Accuracy: 0.97
+Validation Loss: 0.1217	 Validation Accuracy: 0.95         
+------------------------------
+Epoch [14/100]
+correct_predictions: 14548                                 
+ len(actual_labels): 14961
+Training Loss: 0.0759	 Training Accuracy: 0.97
+Validation Loss: 0.1029	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [15/100]
+correct_predictions: 14554                                 
+ len(actual_labels): 14961
+Training Loss: 0.0763	 Training Accuracy: 0.97
+Validation Loss: 0.0998	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [16/100]
+correct_predictions: 14577                                 
+ len(actual_labels): 14961
+Training Loss: 0.0707	 Training Accuracy: 0.97
+Validation Loss: 0.1093	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [17/100]
+correct_predictions: 14596                                 
+ len(actual_labels): 14961
+Training Loss: 0.0678	 Training Accuracy: 0.98
+Validation Loss: 0.0986	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [18/100]
+correct_predictions: 14630                                 
+ len(actual_labels): 14961
+Training Loss: 0.0610	 Training Accuracy: 0.98
+Validation Loss: 0.0854	 Validation Accuracy: 0.97         
+Model saved!
+------------------------------
+Epoch [19/100]
+correct_predictions: 14603                                 
+ len(actual_labels): 14961
+Training Loss: 0.0673	 Training Accuracy: 0.98
+Validation Loss: 0.0839	 Validation Accuracy: 0.97         
+Model saved!
+------------------------------
+Epoch [20/100]
+correct_predictions: 14619                                 
+ len(actual_labels): 14961
+Training Loss: 0.0625	 Training Accuracy: 0.98
+Validation Loss: 0.0949	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [21/100]
+correct_predictions: 14632                                 
+ len(actual_labels): 14961
+Training Loss: 0.0630	 Training Accuracy: 0.98
+Validation Loss: 0.0718	 Validation Accuracy: 0.98         
+Model saved!
+------------------------------
+Epoch [22/100]
+correct_predictions: 14666                                 
+ len(actual_labels): 14961
+Training Loss: 0.0553	 Training Accuracy: 0.98
+Validation Loss: 0.0758	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [23/100]
+correct_predictions: 14687                                 
+ len(actual_labels): 14961
+Training Loss: 0.0517	 Training Accuracy: 0.98
+Validation Loss: 0.0944	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [24/100]
+correct_predictions: 14626                                 
+ len(actual_labels): 14961
+Training Loss: 0.0602	 Training Accuracy: 0.98
+Validation Loss: 0.1006	 Validation Accuracy: 0.96         
+------------------------------
+Epoch [25/100]
+correct_predictions: 14680                                 
+ len(actual_labels): 14961
+Training Loss: 0.0548	 Training Accuracy: 0.98
+Validation Loss: 0.0777	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [26/100]
+correct_predictions: 14679                                 
+ len(actual_labels): 14961
+Training Loss: 0.0555	 Training Accuracy: 0.98
+Validation Loss: 0.1483	 Validation Accuracy: 0.95         
+------------------------------
+Epoch [27/100]
+correct_predictions: 14721                                 
+ len(actual_labels): 14961
+Training Loss: 0.0465	 Training Accuracy: 0.98
+Validation Loss: 0.0776	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [28/100]
+correct_predictions: 14708                                 
+ len(actual_labels): 14961
+Training Loss: 0.0494	 Training Accuracy: 0.98
+Validation Loss: 0.0775	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [29/100]
+correct_predictions: 14713                                 
+ len(actual_labels): 14961
+Training Loss: 0.0462	 Training Accuracy: 0.98
+Validation Loss: 0.1297	 Validation Accuracy: 0.96         
+------------------------------
+Epoch [30/100]
+correct_predictions: 14705                                 
+ len(actual_labels): 14961
+Training Loss: 0.0478	 Training Accuracy: 0.98
+Validation Loss: 0.0856	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [31/100]
+correct_predictions: 14744                                 
+ len(actual_labels): 14961
+Training Loss: 0.0435	 Training Accuracy: 0.99
+Validation Loss: 0.1023	 Validation Accuracy: 0.97         
+------------------------------
+Epoch [32/100]
+correct_predictions: 14745                                 
+ len(actual_labels): 14961
+Training Loss: 0.0404	 Training Accuracy: 0.99
+Validation Loss: 0.0740	 Validation Accuracy: 0.98         
+------------------------------
+Epoch [33/100]
+correct_predictions: 14818                                 
+ len(actual_labels): 14961
+Training Loss: 0.0279	 Training Accuracy: 0.99
+Validation Loss: 0.0579	 Validation Accuracy: 0.98         
+Model saved!
+------------------------------
+Epoch [34/100]
+correct_predictions: 14850                                 
+ len(actual_labels): 14961
+Training Loss: 0.0223	 Training Accuracy: 0.99
+Validation Loss: 0.0559	 Validation Accuracy: 0.98         
+Model saved!
+------------------------------
+Epoch [35/100]
+correct_predictions: 14868                                 
+ len(actual_labels): 14961
+Training Loss: 0.0173	 Training Accuracy: 0.99
+Validation Loss: 0.0578	 Validation Accuracy: 0.98         
+------------------------------
+Epoch [36/100]
+correct_predictions: 14857                                 
+ len(actual_labels): 14961
+Training Loss: 0.0209	 Training Accuracy: 0.99
+Validation Loss: 0.0547	 Validation Accuracy: 0.98         
+Model saved!
+------------------------------
+Epoch [37/100]
+correct_predictions: 14879                                 
+ len(actual_labels): 14961
+Training Loss: 0.0169	 Training Accuracy: 0.99
+Validation Loss: 0.0534	 Validation Accuracy: 0.98         
+Model saved!
+------------------------------
+Epoch [38/100]
+correct_predictions: 14881                                 
+ len(actual_labels): 14961
+Training Loss: 0.0159	 Training Accuracy: 0.99
+Validation Loss: 0.0552	 Validation Accuracy: 0.98         
+------------------------------
+Epoch [39/100]
+correct_predictions: 14875                                 
+ len(actual_labels): 14961
+Training Loss: 0.0164	 Training Accuracy: 0.99
+Validation Loss: 0.0564	 Validation Accuracy: 0.98         
+------------------------------
+Epoch [40/100]
+correct_predictions: 14903                                 
+ len(actual_labels): 14961
+Training Loss: 0.0123	 Training Accuracy: 1.00
+Validation Loss: 0.0567	 Validation Accuracy: 0.98         
+------------------------------
+Epoch [41/100]
+correct_predictions: 14887                                 
+ len(actual_labels): 14961
+Training Loss: 0.0133	 Training Accuracy: 1.00
+Validation Loss: 0.0546	 Validation Accuracy: 0.99         
+------------------------------
+Epoch [42/100]
+correct_predictions: 14902                                 
+ len(actual_labels): 14961
+Training Loss: 0.0123	 Training Accuracy: 1.00
+Validation Loss: 0.0551	 Validation Accuracy: 0.99         
+------------------------------
+Epoch [43/100]
+correct_predictions: 14897                                 
+ len(actual_labels): 14961
+Training Loss: 0.0126	 Training Accuracy: 1.00
+Validation Loss: 0.0600	 Validation Accuracy: 0.98         
+------------------------------
+Epoch [44/100]
+correct_predictions: 14884                                 
+ len(actual_labels): 14961
+Training Loss: 0.0145	 Training Accuracy: 0.99
+Validation Loss: 0.0565	 Validation Accuracy: 0.98         
+------------------------------
+Epoch [45/100]
+correct_predictions: 14892                                 
+ len(actual_labels): 14961
+Training Loss: 0.0139	 Training Accuracy: 1.00
+Validation Loss: 0.0582	 Validation Accuracy: 0.98         
+------------------------------
+Epoch [46/100]
+correct_predictions: 14900                                 
+ len(actual_labels): 14961
+Training Loss: 0.0123	 Training Accuracy: 1.00
+Validation Loss: 0.0583	 Validation Accuracy: 0.98         
+------------------------------
+Epoch [47/100]
+correct_predictions: 14900                                 
+ len(actual_labels): 14961
+Training Loss: 0.0132	 Training Accuracy: 1.00
+Validation Loss: 0.0606	 Validation Accuracy: 0.98         
+------------------------------
+Epoch [48/100]
+correct_predictions: 14909                                 
+ len(actual_labels): 14961
+Training Loss: 0.0104	 Training Accuracy: 1.00
+Validation Loss: 0.0551	 Validation Accuracy: 0.99         
+self.early_stop: True
+Early stopping
+[INFO] Total training time: 1528.788 seconds

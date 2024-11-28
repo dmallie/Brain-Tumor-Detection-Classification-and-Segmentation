@@ -1,0 +1,104 @@
+Out[26]: 
+=========================================================================================================
+Layer (type (var_name))                       Input Shape          Output Shape         Trainable
+=========================================================================================================
+DenseNet (DenseNet)                           [128, 1, 256, 256]   [128, 1]             Partial
+├─Sequential (features)                       [128, 1, 256, 256]   [128, 1024, 8, 8]    Partial
+│    └─Conv2d (conv0)                         [128, 1, 256, 256]   [128, 64, 128, 128]  False
+│    └─BatchNorm2d (norm0)                    [128, 64, 128, 128]  [128, 64, 128, 128]  False
+│    └─ReLU (relu0)                           [128, 64, 128, 128]  [128, 64, 128, 128]  --
+│    └─MaxPool2d (pool0)                      [128, 64, 128, 128]  [128, 64, 64, 64]    --
+│    └─_DenseBlock (denseblock1)              [128, 64, 64, 64]    [128, 256, 64, 64]   False
+│    │    └─_DenseLayer (denselayer1)         [128, 64, 64, 64]    [128, 32, 64, 64]    False
+│    │    └─_DenseLayer (denselayer2)         [128, 64, 64, 64]    [128, 32, 64, 64]    False
+│    │    └─_DenseLayer (denselayer3)         [128, 64, 64, 64]    [128, 32, 64, 64]    False
+│    │    └─_DenseLayer (denselayer4)         [128, 64, 64, 64]    [128, 32, 64, 64]    False
+│    │    └─_DenseLayer (denselayer5)         [128, 64, 64, 64]    [128, 32, 64, 64]    False
+│    │    └─_DenseLayer (denselayer6)         [128, 64, 64, 64]    [128, 32, 64, 64]    False
+│    └─_Transition (transition1)              [128, 256, 64, 64]   [128, 128, 32, 32]   False
+│    │    └─BatchNorm2d (norm)                [128, 256, 64, 64]   [128, 256, 64, 64]   False
+│    │    └─ReLU (relu)                       [128, 256, 64, 64]   [128, 256, 64, 64]   --
+│    │    └─Conv2d (conv)                     [128, 256, 64, 64]   [128, 128, 64, 64]   False
+│    │    └─AvgPool2d (pool)                  [128, 128, 64, 64]   [128, 128, 32, 32]   --
+│    └─_DenseBlock (denseblock2)              [128, 128, 32, 32]   [128, 512, 32, 32]   False
+│    │    └─_DenseLayer (denselayer1)         [128, 128, 32, 32]   [128, 32, 32, 32]    False
+│    │    └─_DenseLayer (denselayer2)         [128, 128, 32, 32]   [128, 32, 32, 32]    False
+│    │    └─_DenseLayer (denselayer3)         [128, 128, 32, 32]   [128, 32, 32, 32]    False
+│    │    └─_DenseLayer (denselayer4)         [128, 128, 32, 32]   [128, 32, 32, 32]    False
+│    │    └─_DenseLayer (denselayer5)         [128, 128, 32, 32]   [128, 32, 32, 32]    False
+│    │    └─_DenseLayer (denselayer6)         [128, 128, 32, 32]   [128, 32, 32, 32]    False
+│    │    └─_DenseLayer (denselayer7)         [128, 128, 32, 32]   [128, 32, 32, 32]    False
+│    │    └─_DenseLayer (denselayer8)         [128, 128, 32, 32]   [128, 32, 32, 32]    False
+│    │    └─_DenseLayer (denselayer9)         [128, 128, 32, 32]   [128, 32, 32, 32]    False
+│    │    └─_DenseLayer (denselayer10)        [128, 128, 32, 32]   [128, 32, 32, 32]    False
+│    │    └─_DenseLayer (denselayer11)        [128, 128, 32, 32]   [128, 32, 32, 32]    False
+│    │    └─_DenseLayer (denselayer12)        [128, 128, 32, 32]   [128, 32, 32, 32]    False
+│    └─_Transition (transition2)              [128, 512, 32, 32]   [128, 256, 16, 16]   False
+│    │    └─BatchNorm2d (norm)                [128, 512, 32, 32]   [128, 512, 32, 32]   False
+│    │    └─ReLU (relu)                       [128, 512, 32, 32]   [128, 512, 32, 32]   --
+│    │    └─Conv2d (conv)                     [128, 512, 32, 32]   [128, 256, 32, 32]   False
+│    │    └─AvgPool2d (pool)                  [128, 256, 32, 32]   [128, 256, 16, 16]   --
+│    └─_DenseBlock (denseblock3)              [128, 256, 16, 16]   [128, 1024, 16, 16]  False
+│    │    └─_DenseLayer (denselayer1)         [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer2)         [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer3)         [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer4)         [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer5)         [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer6)         [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer7)         [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer8)         [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer9)         [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer10)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer11)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer12)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer13)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer14)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer15)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer16)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer17)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer18)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer19)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer20)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer21)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer22)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer23)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    │    └─_DenseLayer (denselayer24)        [128, 256, 16, 16]   [128, 32, 16, 16]    False
+│    └─_Transition (transition3)              [128, 1024, 16, 16]  [128, 512, 8, 8]     False
+│    │    └─BatchNorm2d (norm)                [128, 1024, 16, 16]  [128, 1024, 16, 16]  False
+│    │    └─ReLU (relu)                       [128, 1024, 16, 16]  [128, 1024, 16, 16]  --
+│    │    └─Conv2d (conv)                     [128, 1024, 16, 16]  [128, 512, 16, 16]   False
+│    │    └─AvgPool2d (pool)                  [128, 512, 16, 16]   [128, 512, 8, 8]     --
+│    └─_DenseBlock (denseblock4)              [128, 512, 8, 8]     [128, 1024, 8, 8]    True
+│    │    └─_DenseLayer (denselayer1)         [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer2)         [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer3)         [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer4)         [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer5)         [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer6)         [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer7)         [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer8)         [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer9)         [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer10)        [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer11)        [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer12)        [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer13)        [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer14)        [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer15)        [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    │    └─_DenseLayer (denselayer16)        [128, 512, 8, 8]     [128, 32, 8, 8]      True
+│    └─BatchNorm2d (norm5)                    [128, 1024, 8, 8]    [128, 1024, 8, 8]    False
+├─Sequential (classifier)                     [128, 1024]          [128, 1]             True
+│    └─Dropout (0)                            [128, 1024]          [128, 1024]          --
+│    └─Linear (1)                             [128, 1024]          [128, 512]           True
+│    └─ReLU (2)                               [128, 512]           [128, 512]           --
+│    └─Linear (3)                             [128, 512]           [128, 1]             True
+=========================================================================================================
+Total params: 7,998,210
+Trainable params: 2,683,393
+Non-trainable params: 5,314,817
+Total mult-adds (G): 460.58
+=========================================================================================================
+Input size (MB): 33.55
+Forward/backward pass size (MB): 30182.74
+Params size (MB): 29.89
+Estimated Total Size (MB): 30246.18
+=========================================================================================================

@@ -1,0 +1,151 @@
+densenet_121.py
+Epoch [1/100]
+Training Loss: 0.2164	 Training Accuracy: 0.91	 Training Precision: 0.79
+Validation Loss: 0.1439	 Validation Accuracy: 0.93	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [2/100]
+Training Loss: 0.1309	 Training Accuracy: 0.95	 Training Precision: 0.79
+Validation Loss: 0.1222	 Validation Accuracy: 0.95	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [3/100]
+Training Loss: 0.1038	 Training Accuracy: 0.96	 Training Precision: 0.79
+Validation Loss: 0.1271	 Validation Accuracy: 0.95	 Val Precision: 0.80
+------------------------------
+Epoch [4/100]
+Training Loss: 0.0909	 Training Accuracy: 0.96	 Training Precision: 0.79
+Validation Loss: 0.0943	 Validation Accuracy: 0.96	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [5/100]
+Training Loss: 0.0821	 Training Accuracy: 0.97	 Training Precision: 0.79
+Validation Loss: 0.0913	 Validation Accuracy: 0.96	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [6/100]
+Training Loss: 0.0743	 Training Accuracy: 0.97	 Training Precision: 0.79
+Validation Loss: 0.0794	 Validation Accuracy: 0.97	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [7/100]
+Training Loss: 0.0669	 Training Accuracy: 0.97	 Training Precision: 0.79
+Validation Loss: 0.0798	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [8/100]
+Training Loss: 0.0570	 Training Accuracy: 0.98	 Training Precision: 0.79
+Validation Loss: 0.0858	 Validation Accuracy: 0.96	 Val Precision: 0.80
+------------------------------
+Epoch [9/100]
+Training Loss: 0.0508	 Training Accuracy: 0.98	 Training Precision: 0.79
+Validation Loss: 0.0818	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [10/100]
+Training Loss: 0.0493	 Training Accuracy: 0.98	 Training Precision: 0.79
+Validation Loss: 0.0843	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [11/100]
+Training Loss: 0.0451	 Training Accuracy: 0.98	 Training Precision: 0.79
+Validation Loss: 0.0811	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [12/100]
+Training Loss: 0.0501	 Training Accuracy: 0.98	 Training Precision: 0.79
+Validation Loss: 0.0698	 Validation Accuracy: 0.97	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [13/100]
+Training Loss: 0.0422	 Training Accuracy: 0.98	 Training Precision: 0.79
+Validation Loss: 0.1068	 Validation Accuracy: 0.96	 Val Precision: 0.80
+------------------------------
+Epoch [14/100]
+Training Loss: 0.0402	 Training Accuracy: 0.98	 Training Precision: 0.79
+Validation Loss: 0.0828	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [15/100]
+Training Loss: 0.0367	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0870	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [16/100]
+Training Loss: 0.0372	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0738	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [17/100]
+Training Loss: 0.0339	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0797	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [18/100]
+Training Loss: 0.0292	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0797	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [19/100]
+Training Loss: 0.0320	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0763	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [20/100]
+Training Loss: 0.0322	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0627	 Validation Accuracy: 0.98	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [21/100]
+Training Loss: 0.0306	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0768	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [22/100]
+Training Loss: 0.0314	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0883	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [23/100]
+Training Loss: 0.0296	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0640	 Validation Accuracy: 0.98	 Val Precision: 0.80
+------------------------------
+Epoch [24/100]
+Training Loss: 0.0292	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0645	 Validation Accuracy: 0.98	 Val Precision: 0.80
+------------------------------
+Epoch [25/100]
+Training Loss: 0.0249	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0738	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [26/100]
+Training Loss: 0.0288	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0642	 Validation Accuracy: 0.98	 Val Precision: 0.80
+------------------------------
+Epoch [27/100]
+Training Loss: 0.0275	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0656	 Validation Accuracy: 0.98	 Val Precision: 0.80
+------------------------------
+Epoch [28/100]
+Training Loss: 0.0214	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0749	 Validation Accuracy: 0.98	 Val Precision: 0.80
+------------------------------
+Epoch [29/100]
+Training Loss: 0.0248	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0904	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [30/100]
+Training Loss: 0.0226	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0710	 Validation Accuracy: 0.98	 Val Precision: 0.80
+------------------------------
+Epoch [31/100]
+Training Loss: 0.0216	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0730	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [32/100]
+Training Loss: 0.0186	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0564	 Validation Accuracy: 0.98	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [33/100]
+Training Loss: 0.0136	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0575	 Validation Accuracy: 0.98	 Val Precision: 0.80
+------------------------------
+Epoch [34/100]
+Training Loss: 0.0120	 Training Accuracy: 1.00	 Training Precision: 0.79
+Validation Loss: 0.0586	 Validation Accuracy: 0.98	 Val Precision: 0.80
+------------------------------
+Epoch [35/100]
+Training Loss: 0.0105	 Training Accuracy: 1.00	 Training Precision: 0.79
+Validation Loss: 0.0592	 Validation Accuracy: 0.98	 Val Precision: 0.80
+self.early_stop: True
+Early stopping
+[INFO] Total training time: 2330.361 seconds

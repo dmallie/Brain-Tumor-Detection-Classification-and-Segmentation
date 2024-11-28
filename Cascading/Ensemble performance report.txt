@@ -1,0 +1,6 @@
+System's Performance
+	- Ensemble model accuracy: 2670/2716 ie 98.31%
+	- Accuracy on Healthy Dataset: 561/579 ie  96.89%
+	- Accuracy on Glioma Dataset: 712/723 ie  98.48%
+	- Accuracy on Meningioma Dataset: 719/733 ie  98.09%
+	- Accuracy on Pituitary Dataset: 678/681 ie  99.56%

@@ -1,0 +1,49 @@
+resnet_50.py
+Epoch [1/100]
+Training Loss: 0.2207	 Training Accuracy: 0.90	 Training Precision: 0.79
+Validation Loss: 0.1672	 Validation Accuracy: 0.93	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [2/100]
+Training Loss: 0.1217	 Training Accuracy: 0.95	 Training Precision: 0.79
+Validation Loss: 0.0885	 Validation Accuracy: 0.96	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [3/100]
+Training Loss: 0.0889	 Training Accuracy: 0.96	 Training Precision: 0.79
+Validation Loss: 0.0865	 Validation Accuracy: 0.96	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [4/100]
+Training Loss: 0.0734	 Training Accuracy: 0.97	 Training Precision: 0.79
+Validation Loss: 0.0739	 Validation Accuracy: 0.97	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [5/100]
+Training Loss: 0.0654	 Training Accuracy: 0.97	 Training Precision: 0.79
+Validation Loss: 0.0676	 Validation Accuracy: 0.97	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [6/100]
+Training Loss: 0.0550	 Training Accuracy: 0.98	 Training Precision: 0.79
+Validation Loss: 0.0736	 Validation Accuracy: 0.97	 Val Precision: 0.80
+------------------------------
+Epoch [7/100]
+Training Loss: 0.0514	 Training Accuracy: 0.98	 Training Precision: 0.79
+Validation Loss: 0.0722	 Validation Accuracy: 0.98	 Val Precision: 0.80
+------------------------------
+Epoch [8/100]
+Training Loss: 0.0471	 Training Accuracy: 0.98	 Training Precision: 0.79
+Validation Loss: 0.0679	 Validation Accuracy: 0.98	 Val Precision: 0.80
+------------------------------
+Epoch [9/100]
+Training Loss: 0.0410	 Training Accuracy: 0.98	 Training Precision: 0.79
+Validation Loss: 0.0543	 Validation Accuracy: 0.98	 Val Precision: 0.80
+Model saved!
+------------------------------
+Epoch [10/100]
+Training Loss: 0.0358	 Training Accuracy: 0.99	 Training Precision: 0.79
+Validation Loss: 0.0567	 Validation Accuracy: 0.98	 Val Precision: 0.80
+------------------------------
+Epoch [11/100]
+/tmp/spyder-dagi/tmpxj_yu7nh: line 3: 183181 Killed                  /home/dagi/anaconda3/envs/pytorch/bin/python -Xfrozen_modules=off -m spyder_kernels.console -f /home/dagi/.local/share/jupyter/runtime/kernel-ea456ec7d88a.json
