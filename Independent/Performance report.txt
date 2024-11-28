@@ -1,0 +1,9 @@
+System's Performance
+	- Ensemble model accuracy: 3007/3022 ie 99.50%
+	- Resnet model accuracy: 2975/3022 ie 98.44%
+	- Densenet model accuracy: 2992/3022 ie 99.01%
+	- Efficient model accuracy: 2991/3022 ie 98.97%
+	- Accuracy on Healthy Dataset: 576/579 ie  99.48%
+	- Accuracy on Glioma Dataset: 858/866 ie  99.08%
+	- Accuracy on Meningioma Dataset: 801/803 ie  99.75%
+	- Accuracy on Pituitary Dataset: 772/774 ie  99.74%

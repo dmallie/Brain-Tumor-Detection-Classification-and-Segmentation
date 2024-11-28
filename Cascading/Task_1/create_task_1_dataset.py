@@ -14,7 +14,7 @@ Objective:
         - Data is organized as Training and Testing.
             - Training : organized as glioma_tumor (6613), meningioma_tumor (6708), no_tumor (2842)
             and pituitary_tumor (6189)
-            - Testin: glioma_tumor(620), meningioma_tumor(620), no_tumor (620) and pituitary_tumor (620)
+            - Testing: glioma_tumor(620), meningioma_tumor(620), no_tumor (620) and pituitary_tumor (620)
         
 @author: dagi
 """
