@@ -1,0 +1,9 @@
+Average Dice Loss: U-Net 0.202	 U-Net++ 0.237	 U-Net_attention 0.201	 Ensembled 0.185
+Average IoU: U-Net 0.707	 U-Net++ 0.670	 U-Net_attention 0.712	 Ensembled 0.727
+Average bceDice-Loss: U-Net 7.512	 U-Net++ 7.030	  U-Net_attention 6.070	 Ensembled 6.515
+Average Area Ratio: U-Net 99.301%	 U-Net++ 74.056%	 U-Net_attention 76.794%	 Ensembled 79.250%
+Average Distance Between the Centroids: U-Net 8.577	 U-Net++ 8.248	 U-Net_attention 6.337	 Ensembled 5.145
+Average Similarity in Pixel Wise Comparison: U-Net 80.266	 U-Net++ 79.346	 U-Net_attention 79.346	 Ensembled 81.383
+Average Ratio of Area in Pixel: U-Net 97.064	 U-Net++ 101.480	 U-Net_attention 96.409	 Ensembled 95.467
+Tumors detected by: U-Net is 852/858	 U-Net++ is 831/858	 U-Net_attention is 831/858	 Ensembled is 857/858
+###########################################
