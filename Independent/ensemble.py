@@ -25,7 +25,7 @@ def count_files(directory):
     return file_count
 
 # In[] Set route path for the data
-testPath = "/media/Linux/Mallie_Dagmawi/PyTorch/data/Dataset/Independent/Test/"
+testPath = "/media/Linux/Mallie_Dagmawi/PyTorch/data/Dataset/Thesis Project/Independent/Test/"
 
 size_test_data = count_files(testPath)
 
@@ -87,6 +87,7 @@ def prediction_model(model, image):
 
     # convert predictions to probabilities
     probabilities = F.softmax(predictions, dim=1)
+    print(f"probabilities: {probabilities}")
     output = torch.argmax(probabilities, dim=1)
     return output, predictions
 

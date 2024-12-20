@@ -146,7 +146,7 @@ summary(model = model,
 # In[] Step 6: Setup the loss function and Optimizer function & class imbalance handling
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-optimizer = torch.optim.Adam(params = model.parameters(), lr = 1e-3)
+optimizer = torch.optim.Adam(params = model.parameters(), lr = 1e-4)
 scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer,
                                                  mode = 'min',
                                                  factor = 0.1,
@@ -168,21 +168,6 @@ accuracy_list_training, accuracy_list_val, loss_list_training, loss_list_val = m
 # End the timer and print out how long it took
 end_time = timer()
 print(f"[INFO] Total training time: {end_time-start_time:.3f} seconds")
-
-# In[]
-accuracy_list_training = [0.84, 0.92, 0.95, 0.96, 0.97, 0.97, 0.97, 0.98, 0.98, 0.98, 0.98, 0.98, 0.99, 0.99,
-                          0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99,
-                          0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 1.00]
-accuracy_list_val = [0.91, 0.93, 0.93, 0.95, 0.96, 0.97, 0.97, 0.97, 0.97, 0.96, 0.98, 0.98, 0.98, 0.98, 0.97,
-                     0.98, 0.98, 0.97, 0.98, 0.98, 0.99, 0.98, 0.98, 0.98, 0.98, 0.99, 0.99, 0.98, 0.98, 0.98,
-                     0.98, 0.98, 0.98, 0.98, 0.99, 0.98]
-loss_list_training = [0.4376, 0.2196, 0.1487, 0.1220, 0.0983, 0.0784, 0.0734, 0.0604, 0.0582, 0.0552, 0.0484,
-                      0.0496, 0.0423, 0.0372, 0.0386, 0.0391, 0.0316, 0.0314, 0.0342, 0.0264, 0.0284, 0.0267,
-                      0.0273, 0.0217, 0.0266, 0.0227, 0.0202, 0.0231, 0.0213, 0.0199, 0.0230, 0.0176, 0.0185,
-                      0.0180, 0.0175, 0.0145]
-loss_list_val = [0.2495, 0.1962, 0.1916, 0.1439, 0.1093, 0.0850, 0.0956, 0.0896, 0.0793, 0.1285, 0.0828, 0.0649,
-                 0.0749, 0.0725, 0.0885, 0.0714, 0.0752, 0.0925, 0.0572, 0.0743, 0.0521, 0.0772, 0.0706, 0.0654,
-                 0.0703, 0.0545, 0.0551, 0.0605, 0.0583, 0.0530, 0.0486, 0.0555, 0.0626, 0.0581, 0.0562, 0.0665]
 
 # In[] Step 8: Plot the performance of the model
 x = list(itertools.chain(range(0, len(accuracy_list_training))))

@@ -29,7 +29,7 @@ def count_files(directory):
     return file_count
 
 # In[] Set route path for the data
-rootPath = "/media/Linux/Mallie_Dagmawi/PyTorch/data/Dataset/Independent/"
+rootPath = "/media/Linux/Mallie_Dagmawi/PyTorch/data/Dataset/Thesis Project/Independent/"
 trainingPath = rootPath + "Train/"
 valPath = rootPath + "Val/"
 
@@ -157,7 +157,7 @@ summary(model = model,
 # In[] Step 6: Setup the loss function and Optimizer function & class imbalance handling
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-optimizer = torch.optim.Adam(params = model.parameters(), lr = 1e-3)
+optimizer = torch.optim.Adam(params = model.parameters(), lr = 1e-4)
 scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer,
                                                  mode = 'min',
                                                  factor = 0.1,

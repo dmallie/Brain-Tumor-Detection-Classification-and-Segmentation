@@ -59,7 +59,7 @@ for root, dirs, files in os.walk(src_1_path):
                 tumor.append(scan_full_path)
             else:
                 # otherwise categoize the scan to tumor
-                no_tumor.append(scan_full_path)
+                no_tumor.append(scan_full_path) # 2334
                 
 # In[] Set path and create list from source 2
 src_2_path = "/media/Linux/Downloads/Brain Tumor/Brain Tumor Detection by MALICKS111/"
