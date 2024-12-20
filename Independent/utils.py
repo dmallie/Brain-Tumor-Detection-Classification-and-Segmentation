@@ -14,6 +14,7 @@ import torch
 import cv2
 import numpy as np 
 import os 
+from sklearn.metrics import confusion_matrix
 
 # In[] Setup the accuracy calculator
 # def accuracy_calculator(y_pred=None, y_true=None):
@@ -125,3 +126,66 @@ def calculate_mean_std(path):
 
     # return the mean and standard deviation of the dataset
     return mean_pixel_value, std
+# %% Implementation of Precision
+def precision(y_pred, y_true):
+    class_labels = ["No Tumor", "Pituitary", "Glioma", "Meningioma"]
+    # Ensure both inputs are numpy arrays
+    y_true = np.asarray(y_true)
+    y_pred = np.asarray(y_pred)
+    # generate confusion matrix
+    cm = confusion_matrix(y_true, y_pred, labels = np.arange(len(class_labels)))
+    # Precision for each class
+    precision_per_class = {}
+    for class_id in range(len(class_labels)):
+        true_positives = cm[class_id, class_id]
+        false_positives = cm[:, class_id].sum() - true_positives
+ 
+        if true_positives + false_positives == 0:
+            precision = 0.0  # Avoid division by zero
+        else:
+            precision = true_positives / (true_positives + false_positives)
+ 
+        precision_per_class[class_id] = precision
+ 
+    # Macro-averaged precision
+    precision = np.mean(list(precision_per_class.values()))
+    return precision
+
+# %% Implementation of Recall
+def recall(y_pred, y_true):
+    class_labels = ["No Tumor", "Pituitary", "Glioma", "Meningioma"]
+    # Ensure both inputs are numpy arrays
+    y_true = np.asarray(y_true)
+    y_pred = np.asarray(y_pred)
+    # generate confusion matrix
+    cm = confusion_matrix(y_true, y_pred, labels = np.arange(len(class_labels)))
+    # Precision for each class
+    recall_per_class = {}
+    for class_id in range(len(class_labels)):
+        true_positives = cm[class_id, class_id]
+        false_negatives = cm[class_id, :].sum() - true_positives
+        if true_positives + false_negatives == 0:
+            recall = 0.0  # Avoid division by zero
+        else:
+            recall = true_positives / (true_positives + false_negatives)
+ 
+        recall_per_class[class_id] = recall
+ 
+    # Macro-averaged precision
+    recall = np.mean(list(recall_per_class.values()))
+    return recall
+
+# %% Implementation of F1-Score
+def f1_score(y_pred, y_true):
+    # calculate the average precision of the dataset
+    precision_value = precision(y_pred, y_true)
+    # calculate the average recall value of the prediction
+    recall_value = recall(y_pred, y_true)
+    # to avoide potential division by zero 
+    if precision_value + recall_value == 0:
+        return 0.0
+    # Calculate the F1-Score 
+    f1 = 2 * (precision_value * recall_value)/(precision_value + recall_value)
+    
+    return f1 
+    
